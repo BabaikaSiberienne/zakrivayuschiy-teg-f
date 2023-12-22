@@ -9,7 +9,12 @@
     --font-weight-big: 700;
     --bg-color: white;
     --text-color: #000;
-    
+    --bg-image: #e7e7e7;
+    --bg-image-2: #1a1a1a;
+    --bg-theme: #d3d3d3;
+    --blend-text: white;
+    --btn-color: white;
+
   }
 
   :root.theme-dark {
@@ -17,6 +22,12 @@
     --font-weight-small: 465;
     --bg-color: black;
     --text-color: #00cc14;
+    --bg-image: #007f0c;
+    --bg-image-2: #004306;
+    --bg-theme: #000;
+    --blend-text: #00cc14;
+    --btn-color: black;
+
   }
   
   
@@ -29,7 +40,13 @@
         --bg-color: black;
         background-color: var(--bg-color);
         --text-color: #00cc14;
-        color: var(--text-color)
+        color: var(--text-color);
+        --bg-image: #007f0c;
+        --bg-image-2: #004306;
+        --bg-theme: #000;
+        --blend-text: #00cc14;
+        --btn-color: black;
+
     }
     
 }

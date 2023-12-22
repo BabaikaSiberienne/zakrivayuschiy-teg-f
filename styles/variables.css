@@ -4,4 +4,10 @@
     --font-weight-small: 400;
     --font-weight-big: 700;
     --text-color: #000;
+    --bg-image: #e7e7e7;
+    --bg-image-2: #1a1a1a;
+    --bg-theme: #d3d3d3;
+    --blend-text: white;
+    --btn-color: white;
+    --sparks-color: red;
 }
