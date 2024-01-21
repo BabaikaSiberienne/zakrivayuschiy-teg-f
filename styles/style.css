@@ -20,28 +20,34 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-weight: var(--font-weight-small);
+  /* font-weight: var(--font-weight-small); */
   font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wgth' var(--font-weight-small);
   color: var(--text-color);
   background-image: 
   repeating-linear-gradient(90deg, var(--bg-theme) 0 2px, transparent 2px 4px),
   repeating-linear-gradient(var(--bg-theme) 0 2px, transparent 2px 4px),
   linear-gradient(var(--bg-image) 0 0.01%, var(--bg-image-2));
+  background-color: var(--text-color);
   background-size: cover;
 }
 
 .header {
   width: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
-  height:clamp(20.1875rem, 19.2852rem + 3.8498vw, 22.75rem);
   background-color: var(--btn-color);
-  margin: 0 auto 107px auto;  
+  margin: 0 auto 102px auto;  
   display: flex;
   flex-direction:column;
-  font-family: "PressStart2P", sans-serif;
+  font-family: var(--add-font);
+  border: 2px solid var(--text-color);
 }
 
 .header__heading {
+  margin-top: 20px;
+  margin-bottom: 25px;
   align-self: center;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
 }
 
 .logo {
@@ -49,28 +55,35 @@
   align-self: center;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .theme-menu__button {
   position: relative;
   border: none;
   background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: opacity ease 0.3s;
+  width: 0%;
+  cursor: pointer;
+}
+
+.theme-menu__item:nth-of-type(3) {
+  margin-top: 9px;
+  margin-bottom: 25px;
 }
 
 .theme-menu {
   display: flex;
   justify-content: center;
-
+  margin-left: 1.5rem;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.theme-menu__list:first-child {
-margin-top: 1rem;
+  gap: 2px;
 }
 
 .theme-menu__button:disabled::before {
@@ -78,15 +91,14 @@ margin-top: 1rem;
   content: "▶";
   animation: offset ease-in-out 0.5s infinite alternate;
   top: 0rem;
-  /* left: 0rem; */
-  right: 4.5rem;
+  bottom: 0rem;
+  left: -1.5rem;
+  right: 7rem;
 }
 
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: opacity ease 0.3s;
-  width: 0%;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -103,7 +115,6 @@ margin-top: 1rem;
   content: '';
   display: block;
   width: 0%;
-  height: 3px;
   background-color: var(--bg-image-2);
   transition: width 0.3s;
 
@@ -125,10 +136,17 @@ margin-top: 1rem;
   align-items: center;
 }
 
+.card .container {
+  border-bottom: 2px solid var(--text-color);
+  border-top: 2px solid var(--text-color);
+  position: relative;
+}
+
 .img {
+  display: block;
   object-fit: cover; 
   inline-size: 100%; 
-  aspect-ratio: 1 / 1; 
+  aspect-ratio: 1 / 1;
 }
 
 .brightness {
@@ -162,27 +180,36 @@ margin-top: 1rem;
 .sepia {
   filter: sepia(20%);
 }
+
 .card__heading {
-  font-size: clamp(1.4375rem, 1.6356rem + -0.8451vw, 0.875rem);
-  font-weight: var(--font-weight-big);
+  font-size: 18px;
+  font-variation-settings: 'wgth' var(--font-weight-big);
   margin-left: 10px;
   margin-bottom: 5px;
-
 }
 
 .transparent-label {
  position: absolute;
- color: transparent;
+ font-size: 14px;
+ color: var(--text-color);
+ font-family: var(--add-font);
+ opacity: 0.5;
  mix-blend-mode: hard-light;
  z-index: 3;
- left: 54rem;
+ right: 1px;
+ left: calc(100%-5%)
+ text-shadow:
+   -1px 0 #000000,/*левая граница тени */
+   0 1px #000000, /*нижняя граница тени */
+   1px 0 #000000, /*правая граница тени */
+   0 -1px #000000; /*верхняя граница тени */
 }
 
 
 @supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .transparent-label {
-      -webkit-text-stroke: 1px var(--blend-text);
-      text-stroke: 1px var(--blend-text);
+      -webkit-text-stroke: 1px var(--bg-color);
+      text-stroke: 1px var(--bg-color);
       text-shadow: none;
   }
 }
@@ -194,22 +221,36 @@ margin-top: 1rem;
   background-color: var(--btn-color);
   /* height: clamp(51.4375rem, 47.5202rem + 16.7136vw, 62.5625rem); */
   box-sizing: border-box;
-}
+  border: 2px solid var(--text-color); 
 
-.card:nth-of-type(8) .p {
-  padding-top: 20px;
 }
 
 p {
   line-height: 21px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 21px;
+  
 }
 
 p:first-of-type {
-  padding: 1.563rem 1.563rem 0 1.563rem;
+  padding: 1.8rem 0.5rem 0 1.563rem;
 }
 
 p:last-of-type {
   padding: 1.688rem 1.563rem 0 1.563rem;
+}
+
+.card:last-of-type p:first-of-type {
+  padding: 1.71rem 0.75rem 0 1.563rem;
+}
+
+.card:last-of-type p:last-of-type {
+  padding-bottom: 16px;
+}
+
+.card:last-of-type .card__heading {
+  padding-top: 1px;
 }
 
 .button {
@@ -218,10 +259,13 @@ p:last-of-type {
   border: 1px solid var(--text-color);
   overflow: hidden;
   color: black;
-  font-family: sans-serif;
+  font-family: var(--add-font);
+  margin-bottom: 0.25rem;
   font-weight: bold;
-  font-size: 24px;
+  cursor: pointer;
+  font-size: 14px;
   background-color: var(--btn-color);
+
 }
 
 .button::before {
@@ -230,50 +274,71 @@ p:last-of-type {
   inset: 0;
   background-color: var(--text-color);
   translate: -100% 0%;
+  transition: translate 0.5s ease-in-out;
+
 }
 
 .button:hover::before {
   translate: 0% 0%;
-  transition: translate 0.5s ease-in-out;
 }
 
-button:disabled {
-  animation: change-color ease 0.3s;
+button:disabled { 
+  opacity: 0.5;  
   pointer-events: none;
 }
 
 .button__text {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--blend-text);
   mix-blend-mode: difference;
   font-family: "PressStart2P", sans-serif;
+  padding: 0 20px;
 }
 
-.button:focus-visible {
-  border: 2px var(--text-color) solid;
-  transition: border 0.3s ease;
-}
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--text-color);
+  transition: border 0.3s ease;
 }
 
 .card__like-button {
-  padding: 3px 17px;
+  padding: 2px 14px;
+  margin-bottom: 0;
+  width: 130px;
+  height: 38px;
 }
 
-.button__text {
-  padding: 0 20px;
+.card__like-button:checked {
+  width: 130px;
+  height: 38px;
+}
+
+.btn-ok .button__text {
+  text-transform: uppercase;
+  /* padding: 20px 0; */
+  padding: 0px;
+}
+
+.btn-ok {
+  text-transform: uppercase;
+}
+
+.btn-ok .button__text {
+  padding: 15px 0;
 }
 
 .btn-save {
   display: flex;
-  margin-top: 54px;
+  align-items: center;
+  flex-direction: row;
   background-color: var(--btn-color);
-  margin: 75px auto 0 auto;
+  margin: 55px auto 0 auto;
   height: 100%;
-  width: 23.5%;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
+  margin-bottom: 100px;
 }
 
 .btn-save .button__text {
@@ -284,33 +349,34 @@ button:disabled {
   margin-right: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
-  gap: 12px;
+  gap: 8px;
   display: flex;
   flex-direction: row;
   align-self: end;
   border: none;
 
 }
+
 .card__like-button, .card__icon-button {
   justify-content: center;
   align-content: center;
 }
 
-
-.dialog-id::backdrop {
-  background-color: rgb(0 0 0 );
+#dialog-id::backdrop {
+  background-color: rgb(0 0 0 /0.75);
 }
 
 .form {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.floppy {
+.floppy_btn-save {
   display: flex;
   mix-blend-mode: difference;
-  /* justify-content: center; */
   padding: 0;
   margin-top: 1rem;
   margin-left: 1rem;
@@ -321,17 +387,13 @@ button:disabled {
   block-size: 21px;
 }
 
-.floppy-2 {
-  width: 39px;
-  height: 39px;
+.floppy_dialog {
+  inline-size: 60%;
+  block-size: 60%;
   display: flex;
   mix-blend-mode: difference;
   padding: 0;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 0;
   object-fit: contain;
-  object-position: center;
 }
 
 dialog {
@@ -343,7 +405,8 @@ dialog {
   border-width: 1px;
   transition: opacity 0.3s ease-in-out;
   background-color: var(--btn-color);
-
+  border: 2px solid var(--text-color) ;
+  padding: 30px 30px 30px 30px;
 }
 
 dialog:not([open]) {
@@ -352,11 +415,22 @@ dialog:not([open]) {
 }
 
 dialog .button__text {
-  padding: 0;
-  margin: 0 auto;
   align-self: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 
-dialog .floppy {
-  align-self: center;
+@media (width <= 375px) {
+  .btn-save {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#dialog-id p:first-of-type,
+#dialog-id p:last-of-type {
+ padding: 0;
+ margin: 0;
 }
