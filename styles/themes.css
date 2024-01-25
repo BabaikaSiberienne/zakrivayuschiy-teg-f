@@ -10,7 +10,7 @@
     --bg-color: white;
     --text-color: #000;
     --bg-image: #e7e7e7;
-    --bg-image-2: #1a1a1a;
+    --bg-image-additional: #1a1a1a;
     --bg-theme: #d3d3d3;
     --blend-text: white;
     --btn-color: white;
@@ -23,7 +23,7 @@
     --bg-color: black;
     --text-color: #00cc14;
     --bg-image: #007f0c;
-    --bg-image-2: #004306;
+    --bg-image-additional: #004306;
     --bg-theme: #000;
     --blend-text: #00cc14;
     --btn-color: black;
@@ -35,14 +35,14 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --font-weight-small: 465;
-        font-weight: var(--font-weight-small);
+        font-variation-settings: 'wght' var(--font-weight-small);
         --font-weight-big: 785;
         --bg-color: black;
         background-color: var(--bg-color);
         --text-color: #00cc14;
         color: var(--text-color);
         --bg-image: #007f0c;
-        --bg-image-2: #004306;
+        --bg-image-additional: #004306;
         --bg-theme: #000;
         --blend-text: #00cc14;
         --btn-color: black;

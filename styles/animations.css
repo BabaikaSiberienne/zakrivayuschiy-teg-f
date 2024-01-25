@@ -14,45 +14,40 @@
 */
 
 .sparks {
-    opacity: 0;
-  }
+  opacity: 0;
+}
   
-  .core {
-    fill: transparent;
-    transition: fill 0.3s 0.03s linear;
+.heart .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
   
-  }
+}
   
-  .core:hover {
+.heart:hover .core {
     fill: var(--text-color);
     transition: fill 0.3s linear;
-  }
+}
   
-  .main-body {
+.heart .main-body {
     fill: transparent;
     transition: fill 0.3s linear;
-  }
+}
   
-  .main-body:hover {
+.heart:hover .main-body {
     fill: var(--text-color);
     transition: fill 0.3s 0.05s linear;
-  }
+}
   
-  .core:active {
+.core:active {
     fill: red;
     transition: fill 0.3s linear;
-  }
+}
   
   .main-body:active {
     fill: red;
     transition: fill 0.3s 0.05s linear;
   }
   
-  .like-icon,
-  .card__icon-button {
-    border: none;
-    background-color: var(--btn-color);
-  }
   .like-icon.is-liked .core {
     fill: red;
     transition: fill 0.3s linear;
@@ -67,15 +62,21 @@
     fill: red;
     transition: fill 0.3s 0.06s linear;
   }
-  
-  .like-icon.is-liked .heart {
-    animation: big 0.3s 0.1s ease-in;
-  }
-  
+
   .like-icon.is-liked .sparks {
-    animation: sparks 0.3s 0.3s ease-in;
+    animation: sparks 0.3s 0.3s alternate;
+  }
+
+  .like-icon.is-liked .heart {
+    animation: big 0.3s 0.1s alternate;
+    transform-origin: center;
+
   }
   
+  
+  .like-icon {
+    transform-box: fill-box;
+  }
 
   @keyframes big {
     from {
@@ -88,6 +89,7 @@
 
     to {
       transform: scale(1);
+
     }
   }
   
