@@ -12,53 +12,35 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-.card__icon-button:focus-visible {
-  border: 2px solid transparent;
-}
-
-.card__icon-button:focus-visible {
-  border: 2px solid var(--text-color);
-  transition: border 0.3s ease;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.like-icon,
-.card__icon-button {
-  border: none;
-  background-color: var(--btn-color);
-}
 
 .sparks {
   opacity: 0;
 }
   
-.core {
+.heart .core {
   fill: transparent;
   transition: fill 0.3s 0.03s linear;
   
 }
   
-.core:hover {
-    fill: var(--text-color);
-    transition: fill 0.3s linear;
+.heart:hover .core {
+  fill: var(--text-color);
+  transition: fill 0.3s linear;
 }
   
-.main-body {
-    fill: transparent;
-    transition: fill 0.3s linear;
+.heart .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
   
-.main-body:hover {
-    fill: var(--text-color);
-    transition: fill 0.3s 0.05s linear;
+.heart:hover .main-body {
+  fill: var(--text-color);
+  transition: fill 0.3s 0.05s linear;
 }
   
 .core:active {
-    fill: red;
-    transition: fill 0.3s linear;
+  fill: red;
+  transition: fill 0.3s linear;
 }
   
 .main-body:active {
@@ -66,42 +48,34 @@
   transition: fill 0.3s 0.05s linear;
 }
   
-  .like-icon.is-liked .core {
-    fill: red;
-    transition: fill 0.3s linear;
-  }
+.like-icon.is-liked .core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
   
 .like-icon.is-liked .main-body {
   fill: red;
   transition: fill 0.3s 0.05s linear;
 }
   
-  .like-icon.is-liked .contour {
-    fill: red;
-    transition: fill 0.3s 0.06s linear;
-  }
+.like-icon.is-liked .contour {
+  fill: red;
+  transition: fill 0.3s 0.06s linear;
+}
 
-  .like-icon.is-liked .sparks {
-    animation: sparks 0.3s 0.3s alternate;
-  }
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s alternate;
+}
 
-  .like-icon.is-liked .heart {
-    animation: big 0.3s 0.1s alternate;
-    transform-origin: center;
-
-  }
-
-  .like-icon.is-liked .heart {
-    animation: big 0.3s 0.1s ease-in;
-    /* transform-box: fill-box; */
-    transform-origin: center;
-
-  }
+.like-icon.is-liked .heart {
+  animation: big 0.3s 0.1s alternate;
+  transform-origin: center;
+}
   
   
-  .like-icon {
-    transform-box: fill-box;
-  }
+.like-icon {
+  transform-box: fill-box;
+}
 
 @keyframes big {
   from {
@@ -112,11 +86,10 @@
     transform: scale(1.5);
   }
 
-    to {
-      transform: scale(1);
-
-    }
+  to {
+    transform: scale(1);
   }
+}
   
 @keyframes sparks {
   from {
