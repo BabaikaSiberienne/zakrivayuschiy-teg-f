@@ -12,28 +12,62 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.card__icon-button:focus-visible {
+  border: 2px solid transparent;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--text-color);
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.like-icon,
+.card__icon-button {
+  border: none;
+  background-color: var(--btn-color);
+}
 
 .sparks {
   opacity: 0;
 }
   
+<<<<<<< HEAD
 .heart .core {
+=======
+.core {
+>>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
   fill: transparent;
   transition: fill 0.3s 0.03s linear;
   
 }
   
+<<<<<<< HEAD
 .heart:hover .core {
+=======
+.core:hover {
+>>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
     fill: var(--text-color);
     transition: fill 0.3s linear;
 }
   
+<<<<<<< HEAD
 .heart .main-body {
+=======
+.main-body {
+>>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
     fill: transparent;
     transition: fill 0.3s linear;
 }
   
+<<<<<<< HEAD
 .heart:hover .main-body {
+=======
+.main-body:hover {
+>>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
     fill: var(--text-color);
     transition: fill 0.3s 0.05s linear;
 }
@@ -69,6 +103,13 @@
 
   .like-icon.is-liked .heart {
     animation: big 0.3s 0.1s alternate;
+    transform-origin: center;
+
+  }
+
+  .like-icon.is-liked .heart {
+    animation: big 0.3s 0.1s ease-in;
+    /* transform-box: fill-box; */
     transform-origin: center;
 
   }
