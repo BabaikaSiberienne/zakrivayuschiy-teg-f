@@ -35,11 +35,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --font-weight-small: 465;
-<<<<<<< HEAD
-        font-variation-settings: 'wght' var(--font-weight-small);
-=======
         font-variation-settings: 'wgth' var(--font-weight-small);
->>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
         --font-weight-big: 785;
         --bg-color: black;
         background-color: var(--bg-color);

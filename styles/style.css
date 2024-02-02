@@ -405,7 +405,7 @@ margin: 60px auto 0 auto;
 
 dialog {
   width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
-    position: fixed;
+  position: fixed;
   inset: 0;
   display: grid;
   border-width: 1px;
@@ -430,7 +430,7 @@ dialog:not([open]) {
   align-content: center;
   cursor: pointer;
   padding: 7px 0;
-text-transform: uppercase;
+  text-transform: uppercase;
   font-family: var(--add-font), sans-serif;
   color: var(--text-color);
   padding: 0;

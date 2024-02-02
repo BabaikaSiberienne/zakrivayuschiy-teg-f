@@ -35,39 +35,23 @@
   opacity: 0;
 }
   
-<<<<<<< HEAD
-.heart .core {
-=======
 .core {
->>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
   fill: transparent;
   transition: fill 0.3s 0.03s linear;
   
 }
   
-<<<<<<< HEAD
-.heart:hover .core {
-=======
 .core:hover {
->>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
     fill: var(--text-color);
     transition: fill 0.3s linear;
 }
   
-<<<<<<< HEAD
-.heart .main-body {
-=======
 .main-body {
->>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
     fill: transparent;
     transition: fill 0.3s linear;
 }
   
-<<<<<<< HEAD
-.heart:hover .main-body {
-=======
 .main-body:hover {
->>>>>>> d492f3dc86e4a3eeca111a5be5c33a72aeef9f74
     fill: var(--text-color);
     transition: fill 0.3s 0.05s linear;
 }
