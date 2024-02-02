@@ -214,20 +214,20 @@
 
 p {
   line-height: 21px;
-  font-style: normal;  
-}
+    font-style: normal;
+  }
 
 .card > p {
   padding: 1.75rem 0.5rem 0 1.2rem;
   word-break: break-word;
   overflow-wrap: break-word;
-  font-style: normal;
+font-style: normal;
 }
 
 .card > .card__heading {
-  display: flex;
-  flex-direction: column;
-  font-style: normal;
+display: flex;
+flex-direction: column;
+font-style: normal;
   line-height: normal;
   font-size: 18px;
   font-variation-settings: 'wght' var(--font-weight-big);
@@ -248,10 +248,10 @@ p {
   overflow: hidden;
   color: black;
   font-family: var(--add-font), sans-serif;
-  font-weight: bold;
+    font-weight: bold;
   font-size: 14px;
   background-color: var(--btn-color);
-  transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
   overflow-wrap: normal;
 
 }
@@ -272,8 +272,8 @@ p {
 }
 
 button:disabled { 
-  opacity: 0.6;
-  pointer-events: none;  
+  opacity: 0.6;  
+  pointer-events: none;
 }
 
 .button__text {
@@ -290,7 +290,7 @@ button:disabled {
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--text-color);
-}
+  }
 
 .card__like-button {
   padding: 2px 14px;
@@ -317,7 +317,7 @@ button:disabled {
   align-items: center;
   flex-direction: row;
   background-color: var(--btn-color);
-  margin: 60px auto 0 auto;
+margin: 60px auto 0 auto;
   height: 100%;
   padding: 0.9rem 0 1rem 0;
 }
@@ -386,7 +386,7 @@ button:disabled {
   display: flex;
   mix-blend-mode: difference;
   padding: 0;
-  margin-left: 1rem;
+    margin-left: 1rem;
   margin-right: 0;
   object-fit: contain;
   object-position: center;
@@ -405,7 +405,7 @@ button:disabled {
 
 dialog {
   width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
-  position: fixed;
+    position: fixed;
   inset: 0;
   display: grid;
   border-width: 1px;
@@ -430,7 +430,7 @@ dialog:not([open]) {
   align-content: center;
   cursor: pointer;
   padding: 7px 0;
-  text-transform: uppercase;
+text-transform: uppercase;
   font-family: var(--add-font), sans-serif;
   color: var(--text-color);
   padding: 0;
@@ -441,7 +441,7 @@ dialog:not([open]) {
   .btn-save {
     display: flex;
     flex-direction: column;
-    padding-top: 0.9rem;
+padding-top: 0.9rem;
     padding-bottom: 0.8rem;
     padding-left: 0.6rem;
     padding-right: 0.3rem;
@@ -460,14 +460,14 @@ dialog:not([open]) {
   .floppy_btn-save {
     inline-size: 28px;
     block-size: 28px;
-    align-self: center;
+        align-self: center;
     justify-content: center;
     object-fit: cover;
     margin-bottom: 5px;
     margin-right: 1.2rem;
   }
 
-  .theme-menu__list {
+    .theme-menu__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
