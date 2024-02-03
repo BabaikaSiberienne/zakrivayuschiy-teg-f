@@ -7,26 +7,26 @@
 :root.theme-light {
     --font-weight-small: 400;
     --font-weight-big: 700;
-    --bg-color: white;
+    --bg-color: #fff;
     --text-color: #000;
     --bg-image: #e7e7e7;
     --bg-image-additional: #1a1a1a;
     --bg-theme: #d3d3d3;
-    --blend-text: white;
-    --btn-color: white;
+    --blend-text: #fff;
+    --btn-color: #fff;
 
   }
 
   :root.theme-dark {
     --font-weight-big: 785;
     --font-weight-small: 465;
-    --bg-color: black;
+    --bg-color: #000;
     --text-color: #00cc14;
     --bg-image: #007f0c;
     --bg-image-additional: #004306;
     --bg-theme: #000;
     --blend-text: #00cc14;
-    --btn-color: black;
+    --btn-color: #000;
 
   }
   
@@ -35,9 +35,9 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --font-weight-small: 465;
-        font-variation-settings: 'wgth' var(--font-weight-small);
+        font-variation-settings: 'wght' var(--font-weight-small);
         --font-weight-big: 785;
-        --bg-color: black;
+        --bg-color: #000;
         background-color: var(--bg-color);
         --text-color: #00cc14;
         color: var(--text-color);
@@ -45,7 +45,7 @@
         --bg-image-additional: #004306;
         --bg-theme: #000;
         --blend-text: #00cc14;
-        --btn-color: black;
+        --btn-color: #000;
 
     }
     

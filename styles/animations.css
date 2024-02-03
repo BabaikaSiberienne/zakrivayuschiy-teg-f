@@ -37,6 +37,11 @@
   fill: var(--text-color);
   transition: fill 0.3s 0.05s linear;
 }
+
+.heart:active .main-body,
+.heart:active .core {
+  fill: red;
+}
   
 .core:active {
   fill: red;
@@ -64,11 +69,11 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s 0.3s alternate;
+  animation: sparks 0.3s 0.3s alternate ease-in;
 }
 
 .like-icon.is-liked .heart {
-  animation: big 0.3s 0.1s alternate;
+  animation: big 0.3s 0.1s alternate ease-in;
   transform-origin: center;
 }
   

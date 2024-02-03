@@ -1,16 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --bg-color: white;
+    --bg-color: #fff;
     --font-weight-small: 400;
     --font-weight-big: 700;
     --text-color: #000;
     --bg-image: #e7e7e7;
     --bg-image-additional: #1a1a1a;
     --bg-theme: #d3d3d3;
-    --blend-text: white;
-    --btn-color: white;
+    --blend-text: #fff;
+    --btn-color: #fff;
     --sparks-color: red;
     --main-font: "Inter-Variable";
     --add-font: "PressStart2P";
-    --text-underline: #1a1a1a;
 }
