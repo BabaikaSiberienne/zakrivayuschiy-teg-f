@@ -15,7 +15,7 @@
 */
 
 .page {
-  padding-top: 102px;
+  padding: 103px 0;
   font-size: 18px;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -307,7 +307,7 @@ button:disabled {
   align-items: center;
   flex-direction: row;
   background-color: var(--btn-color);
-  margin: 50px auto 103px;
+  margin: 50px auto 0;
   height: 100%;
   padding: 0.9rem 0 1rem 0;
 }
@@ -335,13 +335,14 @@ button:disabled {
 }
 
 .card__icon-button {
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   cursor: pointer;
   border: 2px solid transparent;
   transition: border 0.3s ease;
   height: 38px;
-  width: 40px;
+  width: 43px;
   object-fit: cover;
 }
 
@@ -434,7 +435,11 @@ dialog:not([open]) {
     padding-bottom: 0.8rem;
     padding-left: 0.6rem;
     padding-right: 0.3rem;
-    margin: 52px auto 100px;
+    margin: 52px auto 0;
+  }
+
+  .page {
+    padding-bottom: 100px;
   }
 
   .card__heading {
